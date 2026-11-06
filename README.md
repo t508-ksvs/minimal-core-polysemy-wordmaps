@@ -2,6 +2,8 @@
 
 張老師的學生學習網站，收錄 **88 個核心單字與 1 張 mind vs. heart 比較圖**。學生可依 A–Z 索引或搜尋找字，播放英文發音，開啟並放大 4:3 教學圖。網站使用靜態 HTML、CSS、JavaScript，可直接部署到 GitHub Pages。
 
+[開啟學生學習網站](https://t508-ksvs.github.io/minimal-core-polysemy-wordmaps/)
+
 教學概念參考：[《超圖解秒懂核心英單》](https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1591341900.pdf)，田中茂範、中村俊佑著；劉芳英譯；語研學院，2020。
 
 ## 預覽
