@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6ed">
+    <meta name="description" content="張老師的極簡核心一字多義單字圖：依 A–Z 索引找單字、聽發音、看圖像。">
+    <title>極簡核心一字多義｜張老師單字圖</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要內容</a>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="極簡核心一字多義，返回首頁">
+          <span class="brand-mark" aria-hidden="true">M<span>·</span>C</span>
+          <span class="brand-copy"><strong>極簡核心一字多義</strong><small>Ms. Chang · 單字圖學習站</small></span>
+        </a>
+        <span class="site-badge" id="catalog-count">核心字圖索引</span>
+      </header>
+
+      <main id="main-content">
+        <div id="app"></div>
+      </main>
+
+      <footer class="site-footer">
+        <span>用一個核心畫面，連起單字的多個意思。</span>
+        <span>© Ms. Chang · 極簡核心一字多義</span>
+      </footer>
+    </div>
+
+    <dialog id="image-dialog" class="image-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-topbar">
+        <strong id="dialog-title">字圖</strong>
+        <div class="dialog-actions">
+          <button class="icon-button" type="button" data-zoom-step="-1" aria-label="縮小圖片">−</button>
+          <span id="zoom-readout" aria-live="polite">100%</span>
+          <button class="icon-button" type="button" data-zoom-step="1" aria-label="放大圖片">＋</button>
+          <button class="close-button" type="button" data-close-dialog>關閉 <span aria-hidden="true">×</span></button>
+        </div>
+      </div>
+      <div class="dialog-image-wrap"><img id="dialog-image" alt=""></div>
+    </dialog>
+    <div id="speech-status" class="sr-only" role="status" aria-live="polite"></div>
+  </body>
+</html>
