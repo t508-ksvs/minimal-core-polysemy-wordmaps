@@ -106,6 +106,19 @@ window.POLYSEMY_DATA = {
       ]
     },
     {
+      "slug": "balance",
+      "word": "balance",
+      "concept": "天平兩端一樣重 → 穩住、均衡、相抵",
+      "image": "assets/AG_balance_43_v2.webp",
+      "alt": "balance 一字多義教學圖：身體平衡、均衡協調、平衡抵銷與帳戶餘額。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "balance"
+        }
+      ]
+    },
+    {
       "slug": "blanket",
       "word": "blanket",
       "concept": "",
@@ -465,6 +478,19 @@ window.POLYSEMY_DATA = {
       ]
     },
     {
+      "slug": "fit",
+      "word": "fit",
+      "concept": "大小、條件剛剛好吻合",
+      "image": "assets/AG_fit_43_v2.webp",
+      "alt": "fit 一字多義教學圖：合身、排進裝入、適合勝任與健康的。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "fit"
+        }
+      ]
+    },
+    {
       "slug": "fold",
       "word": "fold",
       "concept": "",
@@ -557,6 +583,19 @@ window.POLYSEMY_DATA = {
       "comparison": "mind-heart"
     },
     {
+      "slug": "heavy",
+      "word": "heavy",
+      "concept": "重量沉重 → 量多、程度大",
+      "image": "assets/AG_heavy_43.webp",
+      "alt": "heavy 一字多義教學圖：沉重的、滂沱的、擁擠的與沉重大量的。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "heavy"
+        }
+      ]
+    },
+    {
       "slug": "hollow",
       "word": "hollow",
       "concept": "",
@@ -592,6 +631,19 @@ window.POLYSEMY_DATA = {
         {
           "label": "單字發音",
           "text": "interest"
+        }
+      ]
+    },
+    {
+      "slug": "involve",
+      "word": "involve",
+      "concept": "把人或事捲入其中",
+      "image": "assets/AG_involve_43.webp",
+      "alt": "involve 一字多義教學圖：包含需要、牽涉涉及、熱衷參與與捲入麻煩。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "involve"
         }
       ]
     },
@@ -644,6 +696,19 @@ window.POLYSEMY_DATA = {
         {
           "label": "單字發音",
           "text": "lie"
+        }
+      ]
+    },
+    {
+      "slug": "light",
+      "word": "light",
+      "concept": "散發亮度（照亮）＆ 沒有負擔（輕盈）",
+      "image": "assets/AG_light_43_v2.webp",
+      "alt": "light 一字多義教學圖：光線號誌燈、點亮亮起、重量輕的與清淡輕鬆的。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "light"
         }
       ]
     },
@@ -870,6 +935,19 @@ window.POLYSEMY_DATA = {
       ]
     },
     {
+      "slug": "release",
+      "word": "release",
+      "concept": "鬆手放開原本留住的東西",
+      "image": "assets/AG_release_43.webp",
+      "alt": "release 一字多義教學圖：釋放放走、排放氣體、發表公開與舒緩壓力。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "release"
+        }
+      ]
+    },
+    {
       "slug": "reservation",
       "word": "reservation",
       "concept": "",
@@ -944,6 +1022,19 @@ window.POLYSEMY_DATA = {
         {
           "label": "單字發音",
           "text": "serve"
+        }
+      ]
+    },
+    {
+      "slug": "sign",
+      "word": "sign",
+      "concept": "留下看得見的記號 → 標示、預告、簽認",
+      "image": "assets/AG_sign_43_v2.webp",
+      "alt": "sign 一字多義教學圖：標誌招牌、跡象徵兆、簽名簽署與報名登入。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "sign"
         }
       ]
     },
@@ -1100,6 +1191,19 @@ window.POLYSEMY_DATA = {
         {
           "label": "單字發音",
           "text": "track"
+        }
+      ]
+    },
+    {
+      "slug": "treat",
+      "word": "treat",
+      "concept": "把人、事、物拉過來接手應對",
+      "image": "assets/AG_treat_43.webp",
+      "alt": "treat 一字多義教學圖：對待看待、治療醫治、處理加工與請客點心。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "treat"
         }
       ]
     },

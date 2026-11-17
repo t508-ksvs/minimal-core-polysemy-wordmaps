@@ -12,9 +12,9 @@ if (!notePath || !sourcePath) {
 
 const root = path.resolve(__dirname, "..");
 const note = fs.readFileSync(notePath, "utf8");
-const rows = [...note.matchAll(/^\|\s*([^|]+?)\s*\|\s*[^|]+\|\s*`(Codex_[a-z_]+_43\.png)`\s*\|/gm)]
+const rows = [...note.matchAll(/^\|\s*([^|]+?)\s*\|\s*[^|]+\|\s*`((?:Codex|AG)_[a-z_]+_43(?:_v\d+)?\.png)`\s*\|/gm)]
   .map((match) => ({ title: match[1].trim(), filename: match[2] }));
-if (!rows.length) throw new Error("Inventory has no Codex_*_43.png rows");
+if (!rows.length) throw new Error("Inventory has no Codex_*_43.png or AG_*_43.png rows");
 
 const seen = new Set();
 for (const row of rows) {
