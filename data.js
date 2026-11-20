@@ -119,6 +119,19 @@ window.POLYSEMY_DATA = {
       ]
     },
     {
+      "slug": "black",
+      "word": "black",
+      "concept": "吸收光線的深暗色 → 黑暗、純粹、清楚黑字",
+      "image": "assets/AG_black_43.webp",
+      "alt": "black 一字多義教學圖：黑色的、停電遮光、不加奶的與白紙黑字。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "black"
+        }
+      ]
+    },
+    {
       "slug": "blanket",
       "word": "blanket",
       "concept": "",
@@ -279,6 +292,28 @@ window.POLYSEMY_DATA = {
         {
           "label": "單字發音",
           "text": "cover"
+        }
+      ]
+    },
+    {
+      "slug": "credit",
+      "word": "credit",
+      "concept": "給予信任、交付認可（蓋上信任章）",
+      "image": "assets/AG_credit_43_v2.webp",
+      "alt": "credit 一字多義教學圖（4:3 極簡字根版）：信用賒購、功勞歸功於、學分、演職人員名單與入帳購物金。",
+      "pronunciation": [
+        {
+          "label": "單字發音",
+          "text": "credit"
+        }
+      ],
+      "extraImages": [
+        {
+          "label": "16:9 ViewBoard 詳細例句版",
+          "image": "assets/AG_credit_16x9_v2.webp",
+          "alt": "credit 16:9 ViewBoard 詳細教學海報：含五情境概念橋接、例句與 incredible = unbelievable 字根家族。",
+          "width": 1672,
+          "height": 941
         }
       ]
     },
@@ -1204,6 +1239,15 @@ window.POLYSEMY_DATA = {
         {
           "label": "單字發音",
           "text": "treat"
+        }
+      ],
+      "extraImages": [
+        {
+          "label": "16:9 ViewBoard 詳細例句版",
+          "image": "assets/AG_treat_16x9.webp",
+          "alt": "treat 16:9 ViewBoard 詳細教學海報：含四情境概念橋接、例句與字根家族。",
+          "width": 1672,
+          "height": 941
         }
       ]
     },

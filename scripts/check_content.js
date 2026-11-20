@@ -21,7 +21,16 @@ for (const entry of entries) {
   if (!entry.image?.startsWith("assets/") || entry.image.includes("..") || !fs.existsSync(path.join(root, entry.image))) {
     errors.push(`${entry.slug} 找不到網站圖片：${entry.image}`);
   }
+  if (Array.isArray(entry.extraImages)) {
+    for (const extra of entry.extraImages) {
+      if (!extra.label || !extra.alt) errors.push(`${entry.slug} 的延伸圖缺少標題或說明`);
+      if (!extra.image?.startsWith("assets/") || extra.image.includes("..") || !fs.existsSync(path.join(root, extra.image))) {
+        errors.push(`${entry.slug} 找不到延伸圖片：${extra.image}`);
+      }
+    }
+  }
 }
+const extraCount = words.reduce((sum, word) => sum + (Array.isArray(word.extraImages) ? word.extraImages.length : 0), 0);
 for (const word of words) {
   if (word.comparison && !comparisons.some((entry) => entry.slug === word.comparison)) {
     errors.push(`${word.slug} 的比較圖連結不存在`);
@@ -37,5 +46,5 @@ if (errors.length) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log(`已核對 ${words.length} 個單字、${comparisons.length} 張比較圖及 ${entries.length} 張網站圖片。`);
+  console.log(`已核對 ${words.length} 個單字、${comparisons.length} 張比較圖及 ${entries.length + extraCount} 張網站圖片。`);
 }

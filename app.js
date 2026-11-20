@@ -19,7 +19,8 @@
 
   const words = [...data.words].sort((a, b) => a.word.localeCompare(b.word, "en"));
   const comparisons = data.comparisons;
-  document.getElementById("catalog-count").textContent = `${words.length} 字 · ${words.length + comparisons.length} 圖`;
+  const extraImageCount = words.reduce((sum, item) => sum + (Array.isArray(item.extraImages) ? item.extraImages.length : 0), 0);
+  document.getElementById("catalog-count").textContent = `${words.length} 字 · ${words.length + comparisons.length + extraImageCount} 圖`;
 
   function escapeHtml(value) {
     return String(value).replace(/[&<>"']/g, (character) => ({
@@ -117,12 +118,15 @@
     });
   }
 
-  function figureMarkup(item, label) {
+  function figureMarkup(item, label, captionPrefix = "") {
+    const width = item.width || 1448;
+    const height = item.height || 1086;
+    const captionText = captionPrefix ? `${captionPrefix} · 點「放大閱讀」可查看圖片細節。` : "點「放大閱讀」可查看圖片細節。";
     return `
       <figure class="figure-frame">
-        <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" width="1448" height="1086">
+        <img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.alt)}" width="${width}" height="${height}">
         <figcaption class="figure-caption">
-          <span>點「放大閱讀」可查看圖片細節。</span>
+          <span>${escapeHtml(captionText)}</span>
           <button type="button" class="zoom-button" data-open-image="${escapeHtml(item.image)}" data-image-alt="${escapeHtml(item.alt)}" data-image-title="${escapeHtml(label)}">放大閱讀 ↗</button>
         </figcaption>
       </figure>
@@ -132,6 +136,7 @@
   function renderWord(item) {
     const position = words.findIndex((word) => word.slug === item.slug);
     const extraSound = item.pronunciation.slice(1);
+    const extraImages = Array.isArray(item.extraImages) ? item.extraImages : [];
     const comparison = comparisons.find((entry) => entry.slug === item.comparison);
     const previous = words[position - 1];
     const next = words[position + 1];
@@ -143,7 +148,8 @@
           ${soundButton(item.pronunciation[0].text, "聽單字發音", "detail-sound", `播放 ${item.word} 發音`)}
         </div>
         ${extraSound.length ? `<div class="speech-options" aria-label="不同詞性的搭配詞發音">${extraSound.map((entry) => soundButton(entry.text, entry.label, "sound-button", `播放${entry.label} ${entry.text}`)).join("")}</div><p class="speech-note">聽搭配詞，留意不同詞性的讀法。</p>` : ""}
-        ${figureMarkup(item, `${item.word} 字圖`)}
+        ${figureMarkup(item, `${item.word} 字圖`, extraImages.length ? "4:3 極簡字根版" : "")}
+        ${extraImages.map((extra) => figureMarkup(extra, `${item.word}｜${extra.label}`, extra.label)).join("")}
         ${comparison ? `<aside class="related-card"><div><strong>延伸比較｜${escapeHtml(comparison.title)}</strong><p>${escapeHtml(comparison.description)}</p></div><a href="#compare/${encodeURIComponent(comparison.slug)}">查看比較圖 →</a></aside>` : ""}
         <nav class="detail-nav" aria-label="前後單字">
           ${previous ? `<a class="nav-link" href="#word/${encodeURIComponent(previous.slug)}"><small>← 上一字</small><strong>${escapeHtml(previous.word)}</strong></a>` : '<span class="nav-placeholder"></span>'}

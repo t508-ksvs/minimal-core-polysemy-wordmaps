@@ -59,6 +59,7 @@ for (const row of rows) {
     image,
     alt: current.alt || `${row.title} 一字多義教學圖。`,
     pronunciation: current.pronunciation || [{ label: "單字發音", text: row.title }],
+    ...(current.extraImages ? { extraImages: current.extraImages } : {}),
     ...(current.comparison ? { comparison: current.comparison } : {})
   });
 }
